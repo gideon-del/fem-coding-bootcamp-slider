@@ -104,7 +104,6 @@ body {
 }
 .container {
   width: 92%;
-  height: 80vh;
   display: flex;
   align-items: center;
   & > * {
@@ -153,7 +152,7 @@ body {
 .icons {
   position: absolute;
   display: flex;
-  width: 8rem;
+  width: 10vw;
   background-color: #fff;
   border-radius: 100px;
   overflow: hidden;
@@ -168,9 +167,7 @@ body {
     }
   }
 }
-.button {
-  width: 1rem;
-}
+
 .text-1,
 .text-2 {
   grid-row: 1/2;
@@ -186,3 +183,29 @@ body {
 // .img-2 {
 //   transform: translateX(100%);
 // }
+@media only screen and (max-width: 900px) {
+  body {
+    background-size: 100%;
+  }
+  .container {
+    flex-direction: column-reverse;
+    gap: 4rem;
+  }
+  .text {
+    left: 0;
+    text-align: center;
+  }
+  .parag {
+    font-size: 4vw;
+  }
+  .about {
+    font-size: 3vw;
+  }
+  .icons {
+    width: 15vw;
+    left: 36%;
+    & > * {
+      padding: 0.5rem;
+    }
+  }
+}

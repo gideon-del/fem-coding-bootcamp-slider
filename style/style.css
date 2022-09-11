@@ -96,7 +96,6 @@ body {
 
 .container {
   width: 92%;
-  height: 80vh;
   display: flex;
   align-items: center;
 }
@@ -150,7 +149,7 @@ body {
 .icons {
   position: absolute;
   display: flex;
-  width: 8rem;
+  width: 10vw;
   background-color: #fff;
   border-radius: 100px;
   overflow: hidden;
@@ -166,10 +165,6 @@ body {
   background-color: rgba(112, 126, 112, 0.465);
 }
 
-.button {
-  width: 1rem;
-}
-
 .text-1,
 .text-2 {
   grid-row: 1/2;
@@ -181,6 +176,33 @@ body {
   grid-row: 1/2;
   grid-column: 1/2;
   transition: all 0.2s;
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    background-size: 100%;
+  }
+  .container {
+    flex-direction: column-reverse;
+    gap: 4rem;
+  }
+  .text {
+    left: 0;
+    text-align: center;
+  }
+  .parag {
+    font-size: 4vw;
+  }
+  .about {
+    font-size: 3vw;
+  }
+  .icons {
+    width: 15vw;
+    left: 36%;
+  }
+  .icons > * {
+    padding: 0.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
